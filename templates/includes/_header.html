@@ -1,0 +1,16 @@
+{% load static %}
+<header>
+      <a href="index.html" class="navbar-brand" style="margin: 15px 0"> <img src="{% static 'assets/images/spc_logo02.png' %}" height="50"></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <nav>
+        <ul>
+          <li><a href="{% url 'SPC:about' %}">About</a></li>
+          <li><a href="#">Insights</a></li>
+          <li><a href="{% url 'SPC:services' %}">Services</a></li>
+          <li><a href="{% url 'SPC:contact' %}">Contact Us</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+</header>

@@ -1,0 +1,25 @@
+{% extends '_base.html' %}
+<!--title-->
+{% block title %} - {{page_title}}{% endblock title %}
+<!--static-->
+{% load static %}
+<!--content-->
+{% block content %}
+<!-- Main body -->
+
+    <div class="hero-image" style="background-image: url({% static 'assets/images/SPC_advisory.jpg' %})">
+		<div class="hero-text">
+			<h2 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Accounting and Assurance</h2>
+			<p style="font-size: 18px;">The firm comprises of dedicated and experienced	young talented professionals and is assisted by strong committed staff</p>
+		</div>
+	</div>
+
+	<div class="container mt-5">
+		<p>As companies continue to seek growth in developed and rapid growth markets, challenges clearly remain. There is an increasing need to continue keeping a close eye on costs and carefully manage cash flow.</p>
+		<p>Our Accounting & Assurance practice assists businesses in addressing the strategic accounting and financial reporting challenges facing their businesses and the finance function. Our professionals are not only deeply versed in technical accounting, but can provide practical, business-focused advice to leading organisations.</p>
+		<p>Our audit professionals operate on a risk-based model that aligns to a specific understanding of the client’s business, industry, and internal controls. We actively communicate findings and provide knowledge-based insights throughout our assurance engagements.</p>
+		<p>Our audit approach can be tailored to meet the needs of any size organization, as evidenced by our appointment as auditor to some of the largest companies as well as to thousands of small and mid-sized businesses. In every case, a SPC audit is underpinned by our deep industry knowledge, wide international experience, global network of skilled professionals and our commitment to delivering quality services. This deep industry knowledge is one of the foundations of our success. Our teams are aligned to industry groupings in which they have the most expertise, enabling them to deliver tailored solutions to complex issues in these sectors.  Our traditional core competency has been augmented over the years by development of additional services that address our clients’ requirements.  Our audit clients include many of the top performing companies on the Nigeria Securities Exchange, as well as many small and mid-sized businesses. In addition to audit services, we also provide accounting regulatory advice and assurance related service.</p>
+		<img src="images/SPC_accandass.PNG">
+	</div>
+
+{% endblock content%}

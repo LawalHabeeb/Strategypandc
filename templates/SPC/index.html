@@ -1,0 +1,125 @@
+{% extends '_base.html' %}
+<!--title-->
+{% block title %} - {{page_title}}{% endblock title %}
+<!--static-->
+{% load static %}
+<!--content-->
+{% block content %}
+<!-- Main body -->
+    <div class="head">
+		<div id="demo" class="carousel slide" data-bs-ride="carousel">
+			<!-- Indicators/dots -->
+			<div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+			</div>
+			<!-- The slideshow/carousel -->
+			<div class="carousel-inner">
+				<div class="carousel-item active head">
+					<img src="{% static 'assets/images/SPC_002.jpg' %}" alt="SPC WEBSITE" class="d-block" style="width:100%">
+					<div class="carousel-caption">
+                    <h2>Strategy Pros and Cons</h2>
+                        <p>A leading Nigerian firm with strong affiliations offering Audit, Assurance, Tax & Advisory Services.</p>
+                        <button class="about-us me-2"><a href="about.html">About Us</a></button>
+                        <button class="ccontact"><a href="contact.html">Contact US</a></button>
+					</div>
+				</div>
+				<div class="carousel-item head">
+					<img src="{% static 'assets/images/SPC _header01.jpg' %}" alt="SPC WEBSITE" class="d-block" style="width:100%">
+					<div class="carousel-caption">
+					    <h2>Strategy Pros and Cons</h2>
+					    <p>A leading Nigerian firm with strong affiliations offering Audit, Assurance, Tax & Advisory Services.</p>
+                        <button class="about-us me-2"><a href="about.html">About Us</a></button>
+                        <button class="ccontact"><a href="contact.html">Contact US</a></button>
+					</div> 
+				</div>
+				<div class="carousel-item head">
+					<img src="{% static 'assets/images/SPC_header03.jpg' %}" alt="SPC WEBSITE" class="d-block" style="width:100%">
+					<div class="carousel-caption">
+					    <h2>Strategy Pros and Cons</h2>
+					    <p>A leading Nigerian firm with strong affiliations offering Audit, Assurance, Tax & Advisory Services.</p>
+                        <button class="about-us me-2"><a href="about.html">About Us</a></button>
+                        <button class="ccontact"><a href="contact.html">Contact US</a></button>
+					</div>  
+				</div>
+			</div>
+    </div>
+    <div class="container mb-3">
+        <div class="row mt-3 d-flex align-items-center justify-content-center">
+            <div class="col">
+                <h3>QUALITY THROUGH DIVERSITY</h3>
+                <p class="">The creation, sharing and application of knowledge are central to everything we do. But
+                    knowledge does not grow on its own. It is created and nurtured by people coming together to share
+                    their individual ideas. And knowledge is further enriched by variety – especially by the unlimited
+                    richness of experience and cultural diversity in SPC. This diversity in our people means we can
+                    assemble the perfect team to meet our client’s needs.</p>
+            </div>
+            <div class="col d-flex align-items-center justify-content-center">
+                <img src="{% static 'assets/images/SPC_diversity.jpeg' %}" width="400" height="250">
+            </div>
+        </div>
+        <div class="mb-3 mt-3">
+            <h3 class="text-center mt-4 mb-4 index-service">Services</h3>
+            <div class="row justify-content-center">
+                <div class="col-xl-3 col-lg-6 text-center">
+                    <img class="rounded-circle" src="{% static 'assets/images/SPC_round01.jpg' %}"  width="180" height="180">
+                    <h5 class="text-center">Accounting and assurance</h5>
+                    <p class="text-center">Financial statements gives assurance over information used by investors and the capital markets.</p>
+                </div>
+                <div class="col-xl-3 col-lg-6 text-center">
+                    <img class="rounded-circle" src="{% static 'assets/images/SPC_round02.jpg' %}" width="180" height="180">
+                    <h5 class="text-center">Tax and Regulatory Services</h5>
+                    <p class="text-center">Tax attitudes are changing and Organisations are ever more exposed to the new trends in tax regulation both locally and globally</p>
+                </div>
+                <div class="col-xl-3 col-lg-6 text-center">
+                    <img class="rounded-circle" src="{% static 'assets/images/SPC_round03.jpg' %}"  width="180" height="180">
+                    <h5 class="text-center">Advisory</h5>
+                    <p class="text-center">SPC and its team is dedicated to create and protect the sustainable value of their business by providing the best of advisory services.</p>
+                </div>
+            </div>
+            <div class="text-center mt-3 mb-4">
+                <a class="btn btn-primary" href="services.html">All Services <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+        <div>
+            <h3 class="heading">OUR LATEST INSIGHTS</h3>
+            {% for insight in insights %}
+            <div class="row">
+                <div class="col-md-6 col-lg-4 col-xl-3 text-sm-center">
+                    <a href="">
+                        <img src="images/SPC_featured_1.jpg" width="250" height="150" class="mb-2">
+                        <p id="date_of_pub">13/09/21</p>
+                        <h2>VAT in Nigeria</h2>
+                        <p>VAT landsacpe on Value added goods and services.</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 text-sm-center">
+                    <a href="">
+                        <img src="images/SPC_featured_1.jpg" width="250" height="150" class="mb-2">
+                        <p id="date_of_pub">{{ insight.date_added }}</p>
+                        <h2>{{ insight.title }}</h2>
+                        <p>{{ insight.intro }}</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 text-sm-center">
+                    <a href="">
+                        <img src="images/SPC_featured_1.jpg" width="250" height="150" class="mb-2">
+                        <p id="date_of_pub">13/09/21</p>
+                        <h2>VAT in Nigeria</h2>
+                        <p>VAT landsacpe on Value added goods and services.</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 text-sm-center">
+                    <a href="">
+                        <img src="images/SPC_featured_1.jpg" width="250" height="150" class="mb-2">
+                        <p id="date_of_pub">13/09/21</p>
+                        <h2>VAT in Nigeria</h2>
+                        <p>VAT landsacpe on Value added goods and services.</p>
+                    </a>
+                </div>
+            </div>
+            <a href="" class="btn insight_load_btn mb-3 d-flex align-items-center justify-content-center">Load More</a>
+        </div>
+    </div>
+{% endblock content %}

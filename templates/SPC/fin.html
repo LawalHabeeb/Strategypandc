@@ -1,0 +1,30 @@
+{% extends '_base.html' %}
+<!--title-->
+{% block title %} - {{page_title}}{% endblock title %}
+<!--static-->
+{% load static %}
+<!--content-->
+{% block content %}
+<!-- Main body -->
+
+    <div class="hero-image" style="background-image: url({% static 'assets/images/SPC_fin.jpg' %})">
+		<div class="hero-text">
+			<h2 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Financial Advisory</h2>
+			<p style="font-size: 18px;">The firm comprises of dedicated and experienced	young talented professionals and is assisted by strong committed staff</p>
+		</div>
+	</div>
+
+	<div class="container mt-5">
+		<p>We provide Financial Advisory services geared to each client’s investment goals and parameters. We are passionate about nurturing and strengthening businesses. We assist budding entrepreneurs to: Conceptualize plan, Implement, Finance and Mentor viable ideas. We help business variable affect their projections with our robust financial models.</p>
+		<p>We also assist business in drafting business plans at every stage of the company life cycle be it incubation, startup, growth stage, maturity and so on. We also assist business buyers and sellers in conducting in-depth due diligence when a transaction is to be consummated. We also help determine the fair value of businesses so as to avoid over paying on the part of the buyer or short changing on the part of the seller. </p>
+		<p>We provide comprehensive financial economic and strategic advice to companies with complex business problems or disputes. The knowledge, depth and expertise of our firm specialized team is unmatched. </p>
+		<p>Our range of specialized advisory services in mission critical areas of corporate and business finance include:</p>
+		<h5>Corporate Finance</h5>
+		<p>Our firm provide merger and acquisition, and private equity advice from a base of deep industry knowledge. We act as financial advisors for companies raising funds or evaluating the complex financial implications of proposed transactions.</p>
+		<h5>Corporate Value Consulting</h5>
+		<p>We have a team of professionals who work with our clients to maximize their corporation’s value in today’s rapidly changing world. Our services include investigations and the preparation of financial projections and budgets.</p>
+		<h5>Business Recovery Services</h5>
+		<p>We are the premier advisors to business owners and creditors in unlocking and enhancing the value trapped in underperforming businesses. Our services include business turn-around advice and we also offer services for the management of non-performing loan portfolios. </p>
+	</div>
+
+{% endblock content%}

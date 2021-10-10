@@ -1,0 +1,97 @@
+{% extends '_base.html' %}
+<!--title-->
+{% block title %} - {{page_title}}{% endblock title %}
+<!--static-->
+{% load static %}
+<!--content-->
+{% block content %}
+<!-- Main body -->
+    <div class="service-head" style="background-image: url({% static 'assets/images/SPC_services.jpg' %})">
+		<div class="hero-text">
+			<h2 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Services</h2>
+			<p style="font-size: 18px;">The objective of our service offering is to build trust and enhance value for our clients and stakeholders.</p>
+		</div>
+	</div>
+
+	<div class="container mt-5">
+		
+		<div class="row">
+			<div class="col-md-6">
+				<div>
+					<a href="#"><h5>Accounting and Assurance</h5></a>
+					<ul>
+						<li>Outsourced Accounting Services</li>
+						<li>Internal Audit including Bank Charge Audit</li>
+						<li>Transaction Accounting Advisory</li>
+						<li>Payroll Management</li>
+						<li>IFRS Implementation</li>
+						<li>IFRS Post Implementation Support</li>
+					</ul>
+					<a href="accandass.html" class="btn service">Read More</a>
+				</div>
+				<div>
+					<a href="#"><h5>Financial Advisory</h5></a>
+					<ul>
+						<li>Financial Modeling</li>
+						<li>Business Plan Writing</li>
+						<li>Business Valuation</li>
+						<li>Strategy Review & Development</li>
+						<li>Due Diligence</li>
+						<li>Debt Capital Raising</li>
+					</ul>
+					<a href="fin.html" class="btn service">Read More</a>
+				</div>
+				<div>
+					<a href="#"><h5>Information Technology Advisory</h5></a>
+					<ul>
+						<li>GRC Technology</li>
+						<li>Project Management</li>
+						<li>Information Governance</li>
+						<li>Information Security</li>
+						<li>Information Protection</li>
+						<li>IT Internal Audit</li>
+						<li>IT Attestation</li>
+						<li>Cyber Security Services</li>
+						<li>Implementation of SAP, Oracle and Microsoft solutions</li>
+					</ul>
+					<a href="ita.html" class="btn service">Read More</a>
+				</div>
+				<div>
+					<a href="#"><h5>Tax Advisory</h5></a>
+					<ul>
+						<li>Tax Compliance Advisory</li>
+						<li>Strategic Tax Planning</li>
+						<li>Processing Acceptance Certificate</li>
+						<li>Tax Audit Support</li>
+						<li>Tax Health Check</li>
+						<li>Tax Liason</li>
+						<li>Tax Due Diligence</li>
+						<li>Tax Registration</li>
+					</ul>
+					<a href="tax.html" class="btn service">Read More</a>
+				</div>
+				<div>
+					<a href="#"><h5>Risk Advisory</h5></a>
+					<ul>
+						<li>Outsourced accounting services</li>
+						<li>Internal Audit including Bank charge audit</li>
+						<li>Transaction accounting advisory</li>
+						<li>Payroll Management</li>
+						<li>IFRS Implementation</li>
+						<li>IFRS Post implementation support</li>
+					</ul>
+					<a href="risk.html" class="btn service">Read More</a>
+				</div>
+				<div>
+					<a href="#"><h5>Training Services</h5></a>
+					<ul>
+						<li>New staff trainings</li>
+						<li>Interns and volunteer workers trainings</li>
+					</ul>
+					<a href="training.html" class="btn service">Read More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+{% endblock content%}

@@ -1,0 +1,30 @@
+{% extends '_base.html' %}
+<!--title-->
+{% block title %} - {{page_title}}{% endblock title %}
+<!--static-->
+{% load static %}
+<!--content-->
+{% block content %}
+<!-- Main body -->
+
+    <div class="hero-image" style="background-image: url({% static 'assets/images/SPC_ita.jpg' %})">
+		<div class="hero-text">
+			<h2 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Information Technology Advisory</h2>
+			<p style="font-size: 18px;">The firm comprises of dedicated and experienced	young talented professionals and is assisted by strong committed staff</p>
+		</div>
+	</div>
+
+	<div class="container mb-4 mt-5">
+		<p>The right technology, implemented properly, appropriately managed and monitored, can lead to significant gains in growth and efficiency. It is essential to get sound business advice to help ensure technology risks are managed.</p>
+		<p>In the face of these challenges, managing IT risk and compliance has become even more critical, as IT failures can lead to reputational damage, customer and market valuation loss, and an increase in privacy issues and high-profile legal exposure. In this environment, enhancing IT controls is crucial to help ensure businesses are managed and controlled appropriately, and functioning reliably.</p>
+		<p>We assist clients with the following areas:</p>
+		<p><b>Developing an appropriate IT strategy:</b> We work with clients to develop a clear IT strategy that fully supports their business objectives.</p>
+		<p><b>Implementation of SAP, Oracle, and Microsoft solutions:</b> We help to design, integrate, and perform end to end IT project management on ERP solution with our client’s preferred systems, technical architecture and procedures. Our colleagues install and configure that ERP software as defined during the preparation period.We also provide help in testing and training to meet requirements such as a new functionality, report formats or interfaces to existing third-party systems.</p>
+		<p><b>Regulatory and compliance:</b> We are well placed to assist organizations with regulatory and compliance needs. We have a great deal of experience in identifying and controlling financial and operational risks embedded in business systems</p>
+		<p><b>IT risk management and controls:</b> We help clients optimize their risk management and controls architecture, specific to IT.</p>
+		<p><b>Sourcing:</b> We offer guidance on appropriate strategies for outsourcing or offshoring IT services, and help to ensure that effective controls are implemented</p>
+		<p><b>Cost optimization:</b> We work with clients to help identify the most effective ways to take costs out of a business.</p>
+		<p><b>Logistics and supply chain issues:</b> We examine various aspects of processes and technology, and make recommendations for helping to optimize efficiency. This is one of the areas where IT can have the greatest impact.</p>
+	</div>
+
+{% endblock content%}

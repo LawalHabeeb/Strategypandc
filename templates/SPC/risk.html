@@ -1,0 +1,30 @@
+{% extends '_base.html' %}
+<!--title-->
+{% block title %} - {{page_title}}{% endblock title %}
+<!--static-->
+{% load static %}
+<!--content-->
+{% block content %}
+<!-- Main body -->
+
+    <div class="hero-image" style="background-image: url({% static 'assets/images/SPC_risk.jpg' %})">
+		<div class="hero-text">
+			<h2 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Risk Advisory</h2>
+			<p style="font-size: 18px;">The firm comprises of dedicated and experienced	young talented professionals and is assisted by strong committed staff</p>
+		</div>
+	</div>
+
+	<div class="container mt-5">
+		<p>We provide Financial Advisory services geared to each client’s investment goals and parameters. We are passionate about nurturing and strengthening businesses. We assist budding entrepreneurs to: Conceptualize plan, Implement, Finance and Mentor viable ideas. We help business variable affect their projections with our robust financial models. </p>
+		<p>We also assist business in drafting business plans at every stage of the company life cycle be it incubation, startup, growth stage, maturity and so on. We also assist business buyers and sellers in conducting in-depth due diligence when a transaction is to be consummated. We also help determine the fair value of businesses so as to avoid over paying on the part of the buyer or short changing on the part of the seller. </p>
+		<p>We provide comprehensive financial economic and strategic advice to companies with complex business problems or disputes. The knowledge, depth and expertise of our firm specialized team is unmatched. </p>
+		<p>Our range of specialized advisory services in mission critical areas of corporate and business finance include:</p>
+		<h5>Prevention, detection, and investigation of fraud and misconduct</h5>
+		<p>We have experience in the use accounting, investigation, intelligence, technology, economics and deep industry skills alongside consistent global methodologies to help reduce reputational risk and commercial loss, and to improve the value obtained from existing contracts.</p>
+		<h5>Internal Audit Risk & Compliance Services</h5>
+		<p>Faced with new market opportunities, ongoing economic challenges, increased pressure to improve risk management effectiveness, and unprecedented regulatory requirements, many organizations are recognizing the need to transform their internal audit and risk management functions to turn these disruptive forces into opportunities.</p>
+		<h5>Anti-Money Laundering</h5>
+		<p>We provide Anti-Money Laundering (AML) assessments worldwide, and contributed to some of the largest AML investigations and program rehabilitations in recent history. Whether assisting a financial institution proactively seeking to improve its program or reactively responding to a regulatory order, our professionals provide assistance to address many areas of AML program improvement sought by the financial community in today’s marketplace. </p>
+	</div>
+
+{% endblock content%}
