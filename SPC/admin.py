@@ -1,6 +1,8 @@
 from django.contrib import admin
 
-from .models import Insights
+from .models import Insight, Team
 
-admin.site.register(Insights)
+admin.site.register(Insight)
+
+admin.site.register(Team)
 

@@ -4,20 +4,27 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.contrib import messages
 
+
 from SPC.forms import ContactForm
-from .models import Insights
+from .models import Insight, Team
 
 # Create your views here.
 
 
 def index(request):
-    insights = Insights.objects.all()
-    
-    context = {"page_title": "WELCOME TO SPC"}
+    insight = Insight.objects.all()
+    context = {
+        "page_title": "WELCOME TO SPC",
+        "insights": insight,
+    }
     return render(request, "SPC/index.html", context)
 
 def about(request):
-    context = {"page_title": "About SPC"}
+    team = Team.objects.all()
+    context = {
+        "page_title": "About SPC",
+        "teams": team,
+    }
     return render(request, "SPC/about.html", context)
 
 def services(request):
@@ -39,6 +46,11 @@ def ita(request):
 def risk(request):
     context = {"page_title": "Risk Advisory"}
     return render(request, "SPC/risk.html", context)
+
+def insight_detail(request, slug):
+    insight = Insight.objects.get(slug=slug)
+    context = {"insight": Insight}
+    return render(request, "SPC/insight_detail.html", context)
 
 def tax(request):
     context = {"page_title": "Tax Advisory"}

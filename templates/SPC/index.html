@@ -84,26 +84,19 @@
         </div>
         <div>
             <h3 class="heading">OUR LATEST INSIGHTS</h3>
-            {% for insight in insights %}
             <div class="row">
+            {% for insight in insights %}
                 <div class="col-md-6 col-lg-4 col-xl-3 text-sm-center">
-                    <a href="">
-                        <img src="images/SPC_featured_1.jpg" width="250" height="150" class="mb-2">
-                        <p id="date_of_pub">13/09/21</p>
-                        <h2>VAT in Nigeria</h2>
-                        <p>VAT landsacpe on Value added goods and services.</p>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 text-sm-center">
-                    <a href="">
-                        <img src="images/SPC_featured_1.jpg" width="250" height="150" class="mb-2">
+                    <a href="./{{ slug.get_absolute_url }}">
+                        <img src="{{ insight.image }}" width="250" height="150" class="mb-2">
                         <p id="date_of_pub">{{ insight.date_added }}</p>
                         <h2>{{ insight.title }}</h2>
                         <p>{{ insight.intro }}</p>
                     </a>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 text-sm-center">
-                    <a href="">
+            {% endfor %}
+                {% comment %} <div class="col-md-6 col-lg-4 col-xl-3 text-sm-center">
+                    <a href="#">
                         <img src="images/SPC_featured_1.jpg" width="250" height="150" class="mb-2">
                         <p id="date_of_pub">13/09/21</p>
                         <h2>VAT in Nigeria</h2>
@@ -118,6 +111,14 @@
                         <p>VAT landsacpe on Value added goods and services.</p>
                     </a>
                 </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 text-sm-center">
+                    <a href="">
+                        <img src="images/SPC_featured_1.jpg" width="250" height="150" class="mb-2">
+                        <p id="date_of_pub">13/09/21</p>
+                        <h2>VAT in Nigeria</h2>
+                        <p>VAT landsacpe on Value added goods and services.</p>
+                    </a>
+                </div> {% endcomment %}
             </div>
             <a href="" class="btn insight_load_btn mb-3 d-flex align-items-center justify-content-center">Load More</a>
         </div>
