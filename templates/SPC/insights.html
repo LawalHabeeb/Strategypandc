@@ -1,0 +1,25 @@
+{% extends '_base.html' %}
+<!--title-->
+{% block title %} - {{page_title}}{% endblock title %}
+<!--static-->
+{% load static %}
+<!--content-->
+{% block content %}
+<!-- Main body -->
+
+<div class="container">
+    <div class="row">
+        {% for insight in insights %}
+            <div class="col-md-6 col-lg-4 col-xl-3 text-sm-center">
+                <a href="./{{ slug.get_absolute_url }}">
+                    <img src="{{ insight.image }}" width="250" height="150" class="mb-2">
+                    <p id="date_of_pub">{{ insight.date_added }}</p>
+                    <h2>{{ insight.title }}</h2>
+                    <p>{{ insight.intro }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

@@ -47,11 +47,6 @@ def risk(request):
     context = {"page_title": "Risk Advisory"}
     return render(request, "SPC/risk.html", context)
 
-def insight_detail(request, slug):
-    insight = Insight.objects.get(slug=slug)
-    context = {"insight": Insight}
-    return render(request, "SPC/insight_detail.html", context)
-
 def tax(request):
     context = {"page_title": "Tax Advisory"}
     return render(request, "SPC/tax.html", context)
@@ -66,13 +61,13 @@ def contact(request):
         if contact_form.is_valid():
             subject = 'Website Inquiry'
             body = {
-                'full_name': contact_form.cleaned_data['full_nmae'],
+                'full_name': contact_form.cleaned_data['full_name'],
                 'email': contact_form.cleaned_data['email_address'],
                 'company_name': contact_form.cleaned_data['company_name'],
                 'message': contact_form.cleaned_data['message'],
             }
 
-            message = "/n".join(body.values())
+            message = "\n".join(body.values())
 
             try:
                 send_mail(subject, message, 'strategypandc@outlook.com', ['strategypandc@outlook.com'])
@@ -91,3 +86,12 @@ def contact(request):
         "contact_form": contact_form,
         }
     return render(request, "SPC/contact.html", context)
+
+def insights(request):
+    context ={"page_title": "Insights"}
+    return render(request, "SPC/insights.html", context)
+
+def insight_detail(request, slug, id):
+    insight = Insight.objects.get(slug=slug, id=id)
+    context = {"insight": insight}
+    return render(request, "SPC/insight_detail.html", context)

@@ -54,7 +54,7 @@
 				{% for team in teams %}
 				<div class="col">
 					<!-- Button trigger modal -->
-					<img src="/media/{{ team.picture }}" width="180" height="230" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal01">
+					<img src="{{ team.picture.url }}" width="180" height="230" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal01">
 
 					<!-- Modal -->
 					<div class="modal fade" id="exampleModal01" tabindex="-1" aria-labelledby="exampleModalLabel01" aria-hidden="true">

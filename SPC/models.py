@@ -1,11 +1,11 @@
 from django.db import models
 from django.urls import reverse
-from strategyprosandcons.settings import MEDIA_ROOT,MEDIA_URL
-
+# from django.conf import settings
+# from strategyprosandcons.settings import MEDIA_ROOT,MEDIA_URL
 
 class Insight(models.Model):
     title = models.CharField(max_length=225)
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
     image = models.ImageField(upload_to ='insight/')
     intro = models.TextField()
     body = models.TextField()
@@ -15,7 +15,7 @@ class Insight(models.Model):
         ordering = ['-date_added']
 
     def get_absolute_url(self):
-        return reverse("insight_detail", kwargs={"slug": self.slug})
+        return reverse("insight_detail", kwargs={"slug": self.slug, 'id': self.id})
     
 
 

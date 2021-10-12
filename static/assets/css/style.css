@@ -491,7 +491,7 @@ textarea{
 .submit{
     border-radius: 5px;
     background-color: var(--clr-base3);
-    columns: var(--clr-white);
+    color: var(--clr-white);
     height: 40px;
     border: none;
 }

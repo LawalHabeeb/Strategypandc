@@ -13,5 +13,6 @@ urlpatterns = [
     path("tax", views.tax, name="tax"),
     path("training", views.train, name="training"),
     path("contact", views.contact, name="contact"),
-    path("<slug:slug>/", views.insight_detail, name="insight_detail"),
+    path("insights", views.insights, name="insight"),
+    path("<slug:slug>/<int:id>/", views.insight_detail, name="insight_detail"),
 ]
