@@ -12,10 +12,10 @@ from .models import Insight, Team
 
 
 def index(request):
-    insight = Insight.objects.all()
+    insights = Insight.objects.all()
     context = {
         "page_title": "WELCOME TO SPC",
-        "insights": insight,
+        "insights": insights,
     }
     return render(request, "SPC/index.html", context)
 
@@ -87,8 +87,12 @@ def contact(request):
         }
     return render(request, "SPC/contact.html", context)
 
-def insights(request):
-    context ={"page_title": "Insights"}
+def insight_view(request):
+    insights = Insight.objects.all()
+    context ={
+        "page_title": "Insights",
+        "insights": insights,
+    }
     return render(request, "SPC/insights.html", context)
 
 def insight_detail(request, slug, id):

@@ -1,5 +1,5 @@
 from django.urls import path
-from SPC import views
+from . import views
 
 app_name = "SPC"
 urlpatterns = [
@@ -13,6 +13,6 @@ urlpatterns = [
     path("tax", views.tax, name="tax"),
     path("training", views.train, name="training"),
     path("contact", views.contact, name="contact"),
-    path("insights", views.insights, name="insight"),
+    path("insights", views.insight_view, name="insights"),
     path("<slug:slug>/<int:id>/", views.insight_detail, name="insight_detail"),
 ]
