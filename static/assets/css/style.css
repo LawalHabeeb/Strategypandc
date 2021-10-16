@@ -42,7 +42,7 @@ header {
   text-align: center;
   position: fixed;
   z-index: 999;
-  width: 100%;
+  width: 100vw;
 }
 
 /* changed this from the tutorial video to
@@ -97,7 +97,7 @@ nav {
   text-align: left;
   top: 100%;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background: var(--background);
   transform: scale(1, 0);
   transform-origin: top;
@@ -144,7 +144,7 @@ nav a:hover {
 
   header {
     display: grid;
-    width: 100%;
+    width: 100vw;
     grid-template-columns: 1fr auto minmax(37.5rem, 3fr) 1fr;
   }
 
@@ -221,13 +221,12 @@ nav a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   height: 37.5rem;
-  width: 100%;
+  width: 100vw;
   position: relative;
 }
 
 .tax-head {
-  background-image: url(/static/assets/images/SPC_tax.jpg);
-  width: 100%;
+  background-image: url(/static/assets/images/SPC_tax.jpg); 
 }
 
 .ita-head {
@@ -251,7 +250,7 @@ nav a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   height: 37.5rem;
-  width: 100%;
+  width: 100vw;
   position: relative;
 }
 
@@ -477,6 +476,10 @@ body .modal-open {
   top: -25px;
   background-color: var(--clr-white);
   color: var(--clr-base4);
+}
+
+.abt-dmstn {
+  margin-left: 12px;
 }
 
 /**********************

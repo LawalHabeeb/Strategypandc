@@ -8,23 +8,28 @@
 <!-- Main body -->
 
 <div class="hero-image" style="background-image: url({{insight.image.url}})">
-		<div class="hero-text">
-			<h2 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">{{ insight.title }}</h2>
-		</div>
-	</div>
+  <div class="hero-text">
+    <h2
+      style="
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+          'Lucida Sans', Arial, sans-serif;
+      "
+    >
+      {{ insight.title }}
+    </h2>
+  </div>
+</div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-xl-8">
-                <h2>{{ insight.title }}</h2>
+<div class="container mt-4 mb-4">
+  <div class="row">
+    <div class="col-lg-8 col-xl-8">
+      <h2>{{ insight.title }}</h2>
 
-                <small> Posted at {{ insight.date_added }}</small>
-                <p> {{ insight.body }}</p>
-            </div>
-            <div class="col-lg-4 col-xl-4">
-            
-            </div>
-        </div>
+      <small> Posted at {{ insight.date_added }}</small>
+      <p>{{ insight.body }}</p>
     </div>
+    <div class="col-lg-4 col-xl-4"></div>
+  </div>
+</div>
 
 {% endblock content %}

@@ -16,3 +16,6 @@ urlpatterns = [
     path("insights", views.insight_view, name="insights"),
     path("<slug:slug>/<int:id>/", views.insight_detail, name="insight_detail"),
 ]
+
+
+

@@ -109,9 +109,9 @@
         The firm comprises of dedicated and experienced young talented
         professionals and is assisted by strong committed staff
       </p>
-      <div class="row mb-5">
+      <div class="d-flex mb-5" style="width: 60%">
         {% for team in teams %}
-        <div class="col">
+        <div class="me-2">
           <!-- Button trigger modal -->
           <img
             src="{{ team.picture.url }}"
@@ -151,8 +151,10 @@
               </div>
             </div>
           </div>
-          <h6>{{ team.name }}</h6>
-          <h6>{{ team.position }}</h6>
+          <div class="abt-dmstn">
+            <h6>{{ team.name }}</h6>
+            <h6>{{ team.position }}</h6>
+          </div>
         </div>
         {% endfor %} {% comment %}
         <div class="col">
