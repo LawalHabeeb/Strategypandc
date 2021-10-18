@@ -9,7 +9,6 @@ class Insight(models.Model):
     title = models.CharField(max_length=225)
     slug = models.SlugField(unique=True)
     image = models.ImageField(upload_to="insight/")
-    intro = models.TextField()
     body = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
 
@@ -28,3 +27,6 @@ class Team(models.Model):
     name = models.CharField(max_length=99)
     position = models.CharField(max_length=99)
     about = models.TextField()
+
+    def __str__(self) -> str:
+        return self.name

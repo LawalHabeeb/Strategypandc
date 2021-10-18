@@ -10,7 +10,8 @@
   <div class="head">
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
       <!-- Indicators/dots -->
-      {% comment %} <div class="carousel-indicators">
+      {% comment %}
+      <div class="carousel-indicators">
         <button
           type="button"
           data-bs-target="#demo"
@@ -27,7 +28,8 @@
           data-bs-target="#demo"
           data-bs-slide-to="2"
         ></button>
-      </div> {% endcomment %}
+      </div>
+      {% endcomment %}
       <!-- The slideshow/carousel -->
       <div class="carousel-inner">
         <div class="carousel-item active head">
@@ -51,7 +53,8 @@
             </button>
           </div>
         </div>
-        {% comment %} <div class="carousel-item head">
+        {% comment %}
+        <div class="carousel-item head">
           <img
             src="{% static 'assets/images/SPC _header01.jpg' %}"
             alt="SPC WEBSITE"
@@ -92,7 +95,8 @@
               <a href="{% url 'SPC:contact' %}">Contact Us</a>
             </button>
           </div>
-        </div> {% endcomment %}
+        </div>
+        {% endcomment %}
       </div>
     </div>
     <div class="container mb-3">
@@ -181,7 +185,7 @@
               />
               <p id="date_of_pub">{{ insight.date_added }}</p>
               <h2>{{ insight.title }}</h2>
-              <p>{{ insight.intro }}</p>
+              <p>{{ insight.body|truncatewords:15 }}</p>
             </a>
           </div>
           {% endfor %} {% comment %}
