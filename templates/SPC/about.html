@@ -120,22 +120,22 @@
             type="button"
             class="btn"
             data-bs-toggle="modal"
-            data-bs-target="#exampleModal01"
+            data-bs-target="#Modal{{ team.id }}"
           />
 
           <!-- Modal -->
           <div
             class="modal fade"
-            id="exampleModal01"
+            id="Modal{{ team.id }}"
             tabindex="-1"
-            aria-labelledby="exampleModalLabel01"
+            aria-labelledby="{{ team.id }}ModalLabel"
             aria-hidden="true"
           >
             <div class="modal-dialog modal-dialog-centered modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
                   <div class="d-block">
-                    <h5 class="modal-title" id="exampleModalLabel01">
+                    <h5 class="modal-title" id="{{ team.id }}ModalLabel01">
                       {{ team.name }}
                     </h5>
                     <h6 class="modal-title">{{ team.position }}</h6>
@@ -147,7 +147,7 @@
                     aria-label="Close"
                   ></button>
                 </div>
-                <div class="modal-body">{{ team.about }}</div>
+                <div class="modal-body">{{ team.about | safe }}</div>
               </div>
             </div>
           </div>
