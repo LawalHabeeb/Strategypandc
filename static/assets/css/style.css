@@ -246,7 +246,7 @@ nav a:hover {
 }
 
 .contact-head {
-  background-image: url(/static/assets/images/SPC_003.jpg);
+  background-image: url(/static/assets/images/SPC_contact.jpg);
 }
 
 .hero-image {
@@ -279,7 +279,7 @@ nav a:hover {
 .footer-wrapper {
   padding-top: 15px;
   background-color: #1b1b1b;
-  color: #a7a7a7;
+  color: var(--clr-white);
   width: 100vw;
   font-size: 13px;
 }
@@ -310,14 +310,19 @@ nav a:hover {
   padding: 0;
 }
 
-.footer-services,
+.footer-services {
+  font-size: 16px;
+  padding-left: 20px;
+}
+
 .footer-child1 ul {
   list-style: none;
   font-size: 16px;
 }
 
-.footer-services li a {
-  color: var(--clr-base2);
+.footer-services li a,
+.footer-child1 ul li a {
+  color: var(--clr-white);
 }
 
 .footer-services li a:hover,
@@ -338,13 +343,13 @@ nav a:hover {
 
 .footer-child1 ul li a {
   padding: 10px;
-  color: var(--clr-base2);
+  color: var(--clr-white);
 }
 
 .footer-child2 {
   position: absolute;
-  right: 20px;
-  color: var(--clr-base2);
+  right: 40px;
+  color: var(--clr-white);
   font-size: 15px;
 }
 
@@ -481,6 +486,24 @@ body .modal-open {
   margin-left: 12px;
 }
 
+.blockquote::before {
+  content: "“";
+  color: var(--clr-base4);
+  font-weight: 900;
+  display: block;
+}
+
+.quote {
+  border-right: 2px solid var(--clr-base2);
+  padding-right: 30px;
+  height: fit-content;
+}
+
+.caption {
+  font-size: 20px;
+  float: right;
+}
+
 /**********************
       SERVICES
 **********************/
@@ -510,7 +533,7 @@ body .modal-open {
 **********************/
 
 .form-cont {
-  width: 37.5rem;
+  width: 85%;
 }
 
 textarea {
@@ -591,9 +614,9 @@ textarea {
     padding: 0 auto;
   }
 
-  /* .search-txt{
-        display: none;
-    } */
+  .quote {
+    border-right: none;
+  }
 }
 
 @media (max-width: 576px) {
