@@ -33,7 +33,7 @@
         />
         <p id="date_of_pub">{{ insight.date_added }}</p>
         <h2>{{ insight.title }}</h2>
-        <p>{{ insight.body|truncatewords:15 }}</p>
+        <p>{{ insight.body|safe |truncatewords:15 }}</p>
       </a>
     </div>
     {% endfor %}

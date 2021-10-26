@@ -6,11 +6,10 @@
 <!--content-->
 {% block content %}
 <!-- Main body -->
-<div class="container-fluid">
+<div>
   <div class="head">
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
       <!-- Indicators/dots -->
-      {% comment %}
       <div class="carousel-indicators">
         <button
           type="button"
@@ -21,17 +20,17 @@
         <button
           type="button"
           data-bs-target="#demo"
-          data-bs-slide-to="1"
-        ></button>
+          data-bs-slide-to="1">
+        {% comment %} ></button>
         <button
           type="button"
           data-bs-target="#demo"
           data-bs-slide-to="2"
-        ></button>
+        ></button> {% endcomment %}
       </div>
-      {% endcomment %}
       <!-- The slideshow/carousel -->
       <div class="carousel-inner">
+        {% comment %}
         <div class="carousel-item active head">
           <img
             src="{% static 'assets/images/SPC_002.jpg' %}"
@@ -53,73 +52,63 @@
             </button>
           </div>
         </div>
-        {% comment %}
-        <div class="carousel-item head">
-          <img
-            src="{% static 'assets/images/SPC _header01.jpg' %}"
-            alt="SPC WEBSITE"
-            class="d-block"
-            style="width: 100%"
-          />
-          <div class="carousel-caption">
-            <h2>Strategy Pros and Cons</h2>
-            <p>
-              A leading Nigerian firm with strong affiliations offering Audit,
-              Assurance, Tax & Advisory Services.
-            </p>
-            <button class="about-us me-2">
-              <a href="{% url 'SPC:about' %}">About Us</a>
-            </button>
-            <button class="ccontact">
-              <a href="{% url 'SPC:contact' %}">Contact Us</a>
-            </button>
-          </div>
-        </div>
-        <div class="carousel-item head">
-          <img
-            src="{% static 'assets/images/SPC_header03.jpg' %}"
-            alt="SPC WEBSITE"
-            class="d-block"
-            style="width: 100%"
-          />
-          <div class="carousel-caption">
-            <h2>Strategy Pros and Cons</h2>
-            <p>
-              A leading Nigerian firm with strong affiliations offering Audit,
-              Assurance, Tax & Advisory Services.
-            </p>
-            <button class="about-us me-2">
-              <a href="{% url 'SPC:about' %}">About Us</a>
-            </button>
-            <button class="ccontact">
-              <a href="{% url 'SPC:contact' %}">Contact Us</a>
-            </button>
-          </div>
-        </div>
         {% endcomment %}
+        <div class="carousel-item active head">
+          <img
+            src="{% static 'assets/images/SPC_index.jpeg' %}"
+            alt="SPC WEBSITE"
+            class="d-block"
+            style="width: 100%"
+          />
+          <div class="carousel-caption">
+            <h2>Strategy Pros and Cons</h2>
+            <p>
+              A leading Nigerian firm with strong affiliations offering Audit,
+              Assurance, Tax & Advisory Services.
+            </p>
+            <button class="about-us me-2">
+              <a href="{% url 'SPC:about' %}">About Us</a>
+            </button>
+            <button class="ccontact">
+              <a href="{% url 'SPC:contact' %}">Contact Us</a>
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item head">
+          <img
+            src="{% static 'assets/images/SPC_index01.jpeg' %}"
+            alt="SPC WEBSITE"
+            class="d-block"
+            style="width: 100%"
+          />
+          <div class="carousel-caption">
+            <h2>Strategy Pros and Cons</h2>
+            <p>
+              A leading Nigerian firm with strong affiliations offering Audit,
+              Assurance, Tax & Advisory Services.
+            </p>
+            <button class="about-us me-2">
+              <a href="{% url 'SPC:about' %}">About Us</a>
+            </button>
+            <button class="ccontact">
+              <a href="{% url 'SPC:contact' %}">Contact Us</a>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container mb-3">
       <div class="row mt-3 d-flex align-items-center justify-content-center">
-        <div class="col">
-          <h3>QUALITY THROUGH DIVERSITY</h3>
-          <p class="">
-            The creation, sharing and application of knowledge are central to
-            everything we do. But knowledge does not grow on its own. It is
-            created and nurtured by people coming together to share their
-            individual ideas. And knowledge is further enriched by variety –
-            especially by the unlimited richness of experience and cultural
-            diversity in SPC. This diversity in our people means we can assemble
-            the perfect team to meet our client’s needs.
-          </p>
-        </div>
-        <div class="col d-flex align-items-center justify-content-center">
-          <img
-            src="{% static 'assets/images/SPC_quality.png' %}"
-            width="400"
-            height="250"
-          />
-        </div>
+        <h3>QUALITY THROUGH DIVERSITY</h3>
+        <p class="">
+          The creation, sharing and application of knowledge are central to
+          everything we do. But knowledge does not grow on its own. It is
+          created and nurtured by people coming together to share their
+          individual ideas. And knowledge is further enriched by variety –
+          especially by the unlimited richness of experience and cultural
+          diversity in SPC. This diversity in our people means we can assemble
+          the perfect team to meet our client’s needs.
+        </p>
       </div>
       <div class="mb-3 mt-3">
         <h3 class="text-center mt-4 mb-4 index-service">Services</h3>
@@ -185,7 +174,7 @@
               />
               <p id="date_of_pub">{{ insight.date_added }}</p>
               <h2>{{ insight.title }}</h2>
-              <p>{{ insight.body|truncatewords:15 }}</p>
+              <p>{{ insight.body|safe |truncatewords:15 }}</p>
             </a>
           </div>
           {% endfor %} {% comment %}
